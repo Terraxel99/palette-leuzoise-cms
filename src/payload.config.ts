@@ -31,5 +31,4 @@ export default buildConfig({
   plugins: [
     payloadCloud()
   ],
-  indexSortableFields: true,
 });
