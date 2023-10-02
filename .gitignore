@@ -1,0 +1,9 @@
+.yarn/
+build/
+dist/
+/media
+node_modules/
+.DS_Store
+.env
+.pnp.cjs
+.pnp.loader.mjs
