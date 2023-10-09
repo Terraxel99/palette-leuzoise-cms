@@ -1,16 +1,19 @@
 import path from 'path';
-
 import { buildConfig } from 'payload/config';
 import { i18nOptions } from './translations/i18nOptions';
+import payloadCustomEndpoints from './config/payload/custom-endpoints.config';
+
+import cloudinaryPlugin from "payload-cloudinary-plugin/dist/plugins";
 
 import Users from './collections/Users';
 import News from './collections/News';
+import Media from './collections/Media';
+
 import Homepage from './globals/Homepage';
 
 import AfterNavLinks from './components/AfterNavLinks/AfterNavLinks';
 
 import PublishingRoute from './routes/PublishingRoutes/PublishingRoute';
-import payloadCustomEndpoints from './config/payload/custom-endpoints.config';
 
 export default buildConfig({
   admin: {
@@ -24,7 +27,8 @@ export default buildConfig({
   },
   collections: [
     Users,
-    News
+    News,
+    Media
   ],
   globals: [
     Homepage
@@ -44,6 +48,9 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
+  plugins: [
+    cloudinaryPlugin()
+  ],
   endpoints: payloadCustomEndpoints,
   i18n: i18nOptions,
 });
