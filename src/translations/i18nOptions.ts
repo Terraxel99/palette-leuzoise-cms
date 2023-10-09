@@ -4,6 +4,6 @@ import { resources, supportedLanguages } from "./languages";
 export const i18nOptions: InitOptions = {
     fallbackLng: 'fr',
     supportedLngs: supportedLanguages,
-    debug: true,
+    debug: false,
     resources,
 };

@@ -11,7 +11,22 @@ const PublishingPage: React.FC<{}> = () => {
     const [isJobRunning, setIsJobRunning] = useState<boolean>(true);
 
     const triggerDeploy = async () => {
-        
+        setIsJobRunning(true);
+
+        try {
+            const result = await fetch('/api/publish', {
+                method: 'post',
+            });
+
+            if (!result || result?.status !== 204) {
+                throw new Error();
+            }
+
+            toast.success(t('deploySuccessfullyTriggered'));
+        } catch {
+            toast.error(t('deployFailed'));
+            setIsJobRunning(false);
+        }
     };
 
     useEffect(() => {

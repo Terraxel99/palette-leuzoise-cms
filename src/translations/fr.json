@@ -1,6 +1,8 @@
 {
     "publishing": {
         "title": "Publication du site",
-        "navTitle": "Publication"
+        "navTitle": "Publication",
+        "deployFailed": "Une erreur est survenue lors du déploiement",
+        "deploySuccessfullyTriggered": "Le déploiement a correctement été lancé"
     }
 }

@@ -1,15 +1,16 @@
 import path from 'path';
 
 import { buildConfig } from 'payload/config';
+import { i18nOptions } from './translations/i18nOptions';
 
 import Users from './collections/Users';
 import News from './collections/News';
 import Homepage from './globals/Homepage';
 
 import AfterNavLinks from './components/AfterNavLinks/AfterNavLinks';
+
 import PublishingRoute from './routes/PublishingRoutes/PublishingRoute';
-import { isRunningEndpoint, publicationEndpoint } from './api/github.endpoints';
-import { i18nOptions } from './translations/i18nOptions';
+import payloadCustomEndpoints from './config/payload/custom-endpoints.config';
 
 export default buildConfig({
   admin: {
@@ -43,10 +44,6 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
-  plugins: [ ],
-  endpoints: [
-    publicationEndpoint,
-    isRunningEndpoint,
-  ],
+  endpoints: payloadCustomEndpoints,
   i18n: i18nOptions,
 });

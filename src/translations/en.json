@@ -1,6 +1,8 @@
 {
     "publishing": {
         "title": "Website publication",
-        "navTitle": "Publishing"
+        "navTitle": "Publishing",
+        "deployFailed": "An error occurred while triggering the deployment",
+        "deploySuccessfullyTriggered": "The deployment has succesffully been triggered"
     }
 }
