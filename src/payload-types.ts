@@ -9,6 +9,7 @@
 export interface Config {
   collections: {
     users: User;
+    news: News;
   };
   globals: {};
 }
@@ -24,4 +25,10 @@ export interface User {
   loginAttempts?: number;
   lockUntil?: string;
   password?: string;
+}
+export interface News {
+  id: string;
+  title: string;
+  updatedAt: string;
+  createdAt: string;
 }
