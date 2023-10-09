@@ -1,4 +1,4 @@
 {
-  "ext": "ts",
+  "ext": "ts,tsx,js,jsx,json",
   "exec": "ts-node src/server.ts"
 }
