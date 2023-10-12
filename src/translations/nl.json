@@ -3,6 +3,7 @@
         "title": "Website publicatie",
         "navTitle": "Publicatie",
         "deployFailed": "Er is en fout opgetreden tijdens de productie-inzet",
-        "deploySuccessfullyTriggered": "De inzet is met succes gelanceerd"
+        "deploySuccessfullyTriggered": "De inzet is met succes gelanceerd",
+        "cta": "Website inzetten"
     }
 }

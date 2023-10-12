@@ -3,6 +3,7 @@
         "title": "Publication du site",
         "navTitle": "Publication",
         "deployFailed": "Une erreur est survenue lors du déploiement",
-        "deploySuccessfullyTriggered": "Le déploiement a correctement été lancé"
+        "deploySuccessfullyTriggered": "Le déploiement a correctement été lancé",
+        "cta": "Déployer le site"
     }
 }

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import NavGroup from 'payload/dist/admin/components/elements/NavGroup';
 
-const AfterNavLinks: React.FC<any> = () => {
+const ActionLinks: React.ComponentType<any> = () => {
     const { t } = useTranslation("publishing");
 
     return (
@@ -14,4 +14,4 @@ const AfterNavLinks: React.FC<any> = () => {
     );
 }
 
-export default AfterNavLinks;
+export default ActionLinks;

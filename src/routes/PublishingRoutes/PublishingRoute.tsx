@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { AdminView } from "payload/config";
+import { AdminView, AdminViewComponent } from "payload/config";
 import { useStepNav } from 'payload/components/hooks';
 import { Eyebrow, Gutter } from 'payload/components/elements'; 
 import { DefaultTemplate } from 'payload/components/templates';
@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 import PublishingPage from "../../components/PublishingPage/PublishingPage";
 
-const PublishingRoute: AdminView = ({ user, canAccessAdmin }) => {
+const PublishingRoute: AdminViewComponent = ({ user, canAccessAdmin }) => {
     const { t } = useTranslation('publishing');
     const { setStepNav } = useStepNav();
 
@@ -18,9 +18,7 @@ const PublishingRoute: AdminView = ({ user, canAccessAdmin }) => {
     }, [setStepNav]);
 
     return (
-        <DefaultTemplate>
-            <Eyebrow />
-            
+        <DefaultTemplate>            
             <Gutter className="publishing-page__wrap">
                 <PublishingPage />
             </Gutter>

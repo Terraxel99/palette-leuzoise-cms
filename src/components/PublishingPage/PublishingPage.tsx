@@ -45,7 +45,7 @@ const PublishingPage: React.FC<{}> = () => {
 
             <div>
                 <p></p>
-                <Button disabled={isJobRunning} onClick={triggerDeploy}>Publish website</Button>
+                <Button disabled={isJobRunning} onClick={triggerDeploy}>{t('cta')}</Button>
             </div>
         </div>
     );
